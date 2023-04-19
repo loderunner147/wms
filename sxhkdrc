@@ -3,10 +3,10 @@
 ###########################################
 
 super + d
-	dmenu_run -fn 'JetBrainsMono-11' -nb '#23252e' -nf '#f9f8fe' -sb '#f9f8fe' -sf '#23252e'
+	dmenu_run -fn 'JetBrainsMono-9' -nb '#2f343f' -nf '#f2f2f2' -sb '#f2f2f2' -sf '#2f343f' -y '15' -x '660' -z '600'
 
 super + {_,shift + }Return
-	{alacritty, bspc node -s biggest.local}
+	{st, bspc node -s biggest.local}
 
 @Print
 	scrot
@@ -15,7 +15,7 @@ shift + @Print
 	scrot -d 5
 
 super + n
-        nemo
+        thunar
 
 super + v
 	virt-manager
@@ -26,6 +26,8 @@ super + b
 super + i
 	inkscape
 
+super + l
+	lutris
 
 
 ###########################################
@@ -136,12 +138,12 @@ super + ctrl + shift + space
 
 #УВЕЛИЧИТЬ ОКНО СДВИНУВ ОДНУ ИЗ ЕГО СТОРОН
 super + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+	bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 10 0}
 
 #УМЕНЬШИТЬ ОКНО СДВИНУВ ОДНУ ИЗ ЕГО СТОРОН
 super + alt + shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+	bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
 
 #ПЕРЕМЕЩЕНИЕ ПЛАВАЮЩИХ ОКОН
 super + shift + {h,j,k,l}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
+	bspc node -v {-10 0,0 10,0 -10,10 0}
