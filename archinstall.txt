@@ -1,0 +1,47 @@
+Arch Install
+
+
+WI-FI connection:
+
+iwctl
+
+device list
+
+station wlan0 get-networks
+
+station wlan0 connect WIFI-NAME
+
+
+Network Manager:
+
+sudo pacman -S networkmanager
+sudo pacman -S network-manager-applet
+sudo pacman -S nm-connection-editor
+
+systemctl enable NetworkManager.service
+
+
+Display Manager:
+
+sudo pacman -S lightdm lightdm-gtk-greeter
+
+systemctl enable lightdm.service
+
+
+XFCE install:
+
+sudo pacman -S xfce4 xfce4-goodies
+
+
+Time:
+
+sudo timedatectl set-local-rtc 1 --adjust-system-clock
+
+
+AUR:
+
+git clone https://aur.archlinux.org/yay-git.git
+
+sudo chmod 777 ./yay-git
+
+cd ./yay-git && makepkg -si

@@ -1,0 +1,13 @@
+git clone https://gitlab.com/dtos/dtos.git
+
+ls
+
+cd dtos
+
+ls
+
+./dtos
+
+sudo vim /etc/locale.conf
+LC_CTYPE=en_US.UTF-8
+sudo locale-gen

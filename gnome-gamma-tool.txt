@@ -1,0 +1,13 @@
+gnome-gamma-tool:
+
+git clone https://github.com/zb3/gnome-gamma-tool
+cd gnome-gamma-tool
+
+or
+
+sudo apt install gir1.2-colord-1.0
+
+
+use:
+
+./gnome-gamma-tool.py -g 0.8:0.8:0.8
