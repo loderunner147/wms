@@ -1,0 +1,16 @@
+SUDO
+
+username  ALL=(ALL) NOPASSWD:ALL
+
+DEB INSTALL
+
+sudo dpkg -i name.deb
+
+CLEANING
+
+apt-get autoremove
+apt-get clean
+
+CD-ROM OFF
+
+vim /etc/apt/sources.list             # cd-rom
