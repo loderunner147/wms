@@ -1,0 +1,43 @@
+BSPWM
+
+#installation
+pacman -S bspwm sxhkd polybar picom alacritty vim firefox thunar ttf-jetbrains-mono nitrogen
+
+#bspwm config
+mkdir ~/.config
+mkdir ~/.config/bspwm
+cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm
+vim ~/.config/bspwm/bspwmrc
+
+$HOME/.config/polybar/launch.sh
+
+#sxhkd config
+mkdir ~/.config/sxhkd
+cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd
+
+#polybar config
+mkdir ~/.config/polybar
+cp /usr/share/doc/polybar/examples/config.ini ~/.config/polybar/config
+
+#launch.sh
+vim ~/.config/polybar/launch.sh
+
+killall -q polybar
+echo "---" | tee -a /tmp/example_bar.log
+polybar example >> /tmp/example_bar.log
+
+#launch.sh exec
+chmod +x ~/.config/polybar/launch.sh
+
+#xinitrc
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
+vim ~/.xinitrc
+
+#delete all after fi in the end of the file and paste
+setxkbmap -option grp:alt_shift_toggle us,ru
+picom -f &
+xsetroot -cursor_name left_ptr
+exec bspwm
+
+#start
+startx
